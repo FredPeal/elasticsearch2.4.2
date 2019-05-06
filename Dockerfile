@@ -3,8 +3,6 @@ FROM centos:latest
 ENV HOME /root
 WORKDIR /root
 
-RUN useradd elasticsearch -c 'Elasticsearch User' -d /home/elasticsearch
-
 RUN yum update -y && \
     yum install -y wget && \
     yum install -y java-1.8.0-openjdk java-1.8.0-openjdk-devel && \
@@ -22,5 +20,5 @@ RUN yum update -y && \
 COPY elasticsearch.yml /usr/share/elasticsearch/config/
 WORKDIR /usr/share/elasticsearch/bin
 EXPOSE 9200:9200
-CMD [ "./elasticsearch","-Des.insecure.allow.root=true","-FOREGROUN"]
+CMD [ "./elasticsearch","-Des.insecure.allow.root=true"]
 

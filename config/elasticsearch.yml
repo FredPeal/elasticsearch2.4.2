@@ -1,6 +1,0 @@
-network.host: 0.0.0.0
-discovery.zen.minimum_master_nodes: 1
-boostrap.ignore_system_boostrap_checks: true
-script.inline: on
-script.indexed: on
-script.engine.groovy.inline.aggs: on
